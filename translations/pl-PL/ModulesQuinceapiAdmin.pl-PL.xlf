@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+  <file source-language="en-US" target-language="pl-PL" datatype="plaintext" original="ModulesQuinceapiAdmin">
+    <body>
+      <trans-unit id="quince.api.name">
+        <source>Quince API</source>
+        <target>Quince API</target>
+      </trans-unit>
+      <trans-unit id="quince.api.desc">
+        <source>Admin API endpoints for data PrestaShop's native API does not expose. Today, merchandise returns with their line items. No settings screen: external systems only, over OAuth2.</source>
+        <target>Punkty końcowe Admin API dla danych, których natywne API PrestaShopa nie udostępnia. Obecnie: zwroty towaru wraz z ich pozycjami. Bez ekranu ustawień: tylko dla systemów zewnętrznych, przez OAuth2.</target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>
