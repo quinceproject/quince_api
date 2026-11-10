@@ -1,0 +1,39 @@
+services:
+  _defaults:
+    public: true
+    autoconfigure: true
+    autowire: true
+    tags: ['controller.service_arguments']
+
+  Quince\Api\Repository:
+    class: Quince\Api\Repository
+
+  # Rdzeń wczytuje zasoby sam z `src/ApiPlatform/Resources`, ale dostawcy
+  # i procesor trzeba zarejestrować jak każdą inną usługę — API Platform
+  # sięga po nie po nazwie klasy (ten sam wzorzec co w quince_withdrawal
+  # i quince_cmp).
+  Quince\Api\ApiPlatform\Provider\OrderReturnProvider:
+    class: Quince\Api\ApiPlatform\Provider\OrderReturnProvider
+    arguments:
+      - '@Quince\Api\Repository'
+      - '@request_stack'
+    tags: ['api_platform.state_provider']
+
+  Quince\Api\ApiPlatform\Provider\OrderReturnStateProvider:
+    class: Quince\Api\ApiPlatform\Provider\OrderReturnStateProvider
+    arguments:
+      - '@Quince\Api\Repository'
+      - '@request_stack'
+    tags: ['api_platform.state_provider']
+
+  Quince\Api\ApiPlatform\Provider\InfoProvider:
+    class: Quince\Api\ApiPlatform\Provider\InfoProvider
+    tags: ['api_platform.state_provider']
+
+  Quince\Api\ApiPlatform\Processor\OrderReturnStateProcessor:
+    class: Quince\Api\ApiPlatform\Processor\OrderReturnStateProcessor
+    arguments:
+      - '@prestashop.core.command_bus'
+      - '@Quince\Api\Repository'
+      - '@request_stack'
+    tags: ['api_platform.state_processor']
