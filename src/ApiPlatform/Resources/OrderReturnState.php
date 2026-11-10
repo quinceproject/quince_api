@@ -30,7 +30,7 @@ use Quince\Api\ApiPlatform\Provider\OrderReturnStateProvider;
             openapiContext: [
                 'summary' => 'Merchandise return statuses',
                 'description' => 'Requires `shopId`, used only to resolve the shop\'s default language '
-                    . 'for `name` — statuses themselves are not per-shop.',
+                    . 'for `name`. Statuses themselves are not per-shop.',
             ],
         ),
     ],

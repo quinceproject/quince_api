@@ -63,7 +63,7 @@ use Symfony\Component\HttpFoundation\Response;
             openapiContext: [
                 'summary' => 'Change the return\'s status',
                 'description' => 'Body: `{"stateId": N}`. Goes through the core command, same as the '
-                    . 'native panel — the customer gets the standard status-change e-mail. Setting the '
+                    . 'native panel: the customer gets the standard status-change e-mail. Setting the '
                     . 'same status again is a no-op: no second e-mail.',
             ],
         ),
