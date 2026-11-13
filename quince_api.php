@@ -53,7 +53,7 @@ class Quince_Api extends Module
     {
         $this->name = 'quince_api';
         $this->tab = 'administration';
-        $this->version = '0.1.2';
+        $this->version = '0.1.3';
         $this->author = 'Quince Project';
         $this->need_instance = 0;
         $this->ps_versions_compliancy = ['min' => '9.2.0', 'max' => '9.99.99'];
