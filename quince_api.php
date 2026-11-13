@@ -29,21 +29,20 @@ if (file_exists(__DIR__ . '/vendor/autoload.php')) {
 }
 
 /**
- * Quince API — luki w Admin API rdzenia PrestaShop.
+ * Quince API: luki w Admin API rdzenia PrestaShop.
  *
  * Jedyne zadanie: oddawać przez Admin API dane, których natywne Admin API
- * i Webservice nie oddają. Dziś to natywne zwroty towaru (RMA) — lista
+ * i Webservice nie oddają. Dziś to natywne zwroty towaru (RMA): lista
  * i szczegół z pozycjami (`order_return_detail` + ceny z `order_detail`,
  * czego Webservice nie daje wprost), lista statusów zwrotu, i zmiana
  * statusu przez komendę rdzenia `UpdateOrderReturnStateCommand` (ten sam
  * kod co natywny panel: mail do klienta, haki `actionObjectOrderReturn*`).
  *
- * Moduł nie ma żadnego ekranu w panelu — to świadome. Jedyni odbiorcy to
- * systemy zewnętrzne przez OAuth2; sprzedawca zarządza zwrotami tam, gdzie
- * już to robi (natywny ekran „Merchandise Returns").
+ * Moduł nie ma żadnego ekranu w panelu. Jedyni odbiorcy to systemy
+ * zewnętrzne przez OAuth2; sprzedawca zarządza zwrotami na natywnym ekranie
+ * „Merchandise Returns".
  *
- * Stoi obok `quince_withdrawal` i `quince_cmp`, nie w nich — te mają własne
- * dane, ten moduł ma dane RDZENIA, których żaden moduł Quince nie jest
+ * Moduł oddaje dane RDZENIA, których żaden moduł Quince nie jest
  * właścicielem.
  */
 class Quince_Api extends Module

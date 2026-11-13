@@ -19,7 +19,7 @@ use Quince\Api\Repository;
 use Symfony\Component\HttpFoundation\RequestStack;
 
 /**
- * Zwroty towaru czytane przez Admin API — ta sama logika co natywny panel
+ * Zwroty towaru czytane przez Admin API: ta sama logika co natywny panel
  * (`PS_RETURN_PREFIX`, nazwa statusu w języku sklepu), żeby system zewnętrzny
  * nie liczył referencji po swojemu z ryzykiem rozjazdu.
  *

@@ -19,8 +19,8 @@ use Quince\Api\Repository;
 use Symfony\Component\HttpFoundation\RequestStack;
 
 /**
- * Lista statusów zwrotu — nie są przypisane do sklepu, tylko `shopId`
- * rozwiązuje język nazwy (ten sam wzorzec co reszta tego modułu).
+ * Lista statusów zwrotu. Statusy nie są przypisane do sklepu, `shopId`
+ * rozwiązuje tylko język nazwy.
  *
  * @implements ProviderInterface<OrderReturnState>
  */

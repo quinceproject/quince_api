@@ -18,7 +18,7 @@ use Quince\Api\ApiPlatform\Provider\OrderReturnStateProvider;
 
 /**
  * Jeden status, na jaki może przejść zwrot towaru. Ten sam zestaw, co
- * natywny panel pokazuje przy zwrocie — rdzeń nie udostępnia tego przez
+ * natywny panel pokazuje przy zwrocie. Rdzeń nie udostępnia tego przez
  * Webservice ani przez standardowe Admin API.
  */
 #[ApiResource(

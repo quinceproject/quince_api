@@ -16,7 +16,7 @@ use Quince\Api\ApiPlatform\Resources\OrderReturn;
 use Quince\Api\Repository;
 
 /**
- * Wiersz z {@see Repository} na zasób API — jedno miejsce dla dostawcy
+ * Wiersz z {@see Repository} na zasób API. Jedno miejsce dla dostawcy
  * i procesora, żeby odczyt po zapisie zwracał dokładnie ten sam kształt
  * co lista i szczegół.
  */
@@ -70,7 +70,7 @@ final class OrderReturnMapper
         return $zasob;
     }
 
-    /** `PS_RETURN_PREFIX` + numer na 6 cyfr — ten sam kształt co natywny PDF zwrotu. */
+    /** `PS_RETURN_PREFIX` + numer na 6 cyfr, ten sam kształt co natywny PDF zwrotu. */
     private function reference(int $id, int $idLang, int $idShop): string
     {
         $prefiks = trim((string) Configuration::get('PS_RETURN_PREFIX', $idLang, null, $idShop));

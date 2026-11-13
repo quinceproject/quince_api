@@ -15,13 +15,13 @@ use Db;
 use OrderReturnState;
 
 /**
- * Dostęp do natywnych zwrotów towaru (RMA) — wyłącznie odczyt.
+ * Dostęp do natywnych zwrotów towaru (RMA), wyłącznie odczyt.
  *
  * Zapytania własne, nie przez CQRS rdzenia: żadna gotowa kwerenda nie
- * oddaje listy z `updatedSince`/stronicowaniem ani pozycji z cenami —
+ * oddaje listy z `updatedSince`/stronicowaniem ani pozycji z cenami.
  * `GetOrderReturnForEditing` obsługuje tylko pojedynczy formularz edycji
  * w panelu, bez pozycji i bez sklepu. Zapis (zmiana statusu) idzie inną
- * drogą — przez `UpdateOrderReturnStateCommand`, zob. `OrderReturnStateProcessor`.
+ * drogą: przez `UpdateOrderReturnStateCommand`, zob. `OrderReturnStateProcessor`.
  */
 final class Repository
 {
@@ -70,7 +70,7 @@ final class Repository
     }
 
     /**
-     * Pozycje zwrotu, z ilością zamówioną i ceną pobraną z linii zamówienia —
+     * Pozycje zwrotu, z ilością zamówioną i ceną pobraną z linii zamówienia:
      * `order_return_detail` sama w sobie nie niesie ani referencji produktu,
      * ani ceny.
      *
@@ -92,7 +92,7 @@ final class Repository
     }
 
     /**
-     * Statusy zwrotu w języku sklepu — ta sama kwerenda, co natywny panel.
+     * Statusy zwrotu w języku sklepu, ta sama kwerenda, co natywny panel.
      *
      * @return array<int,array<string,mixed>>
      */

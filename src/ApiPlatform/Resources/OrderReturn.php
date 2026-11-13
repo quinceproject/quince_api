@@ -27,9 +27,9 @@ use Symfony\Component\HttpFoundation\Response;
  * Natywny zwrot towaru (RMA), z pozycjami.
  *
  * Odczyt sięga bezpośrednio do tabel rdzenia (żadna gotowa kwerenda CQRS
- * nie oddaje listy z pozycjami i cenami — zob. {@see \Quince\Api\Repository}).
+ * nie oddaje listy z pozycjami i cenami, zob. {@see \Quince\Api\Repository}).
  * Zapis statusu idzie wyłącznie przez natywną komendę rdzenia
- * `UpdateOrderReturnStateCommand`, nie bezpośredni zapis — dzięki temu klient
+ * `UpdateOrderReturnStateCommand`, nie bezpośredni zapis. Dzięki temu klient
  * dostaje ten sam mail co z panelu i odpalają się te same haki.
  */
 #[ApiResource(

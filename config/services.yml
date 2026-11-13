@@ -9,9 +9,8 @@ services:
     class: Quince\Api\Repository
 
   # Rdzeń wczytuje zasoby sam z `src/ApiPlatform/Resources`, ale dostawcy
-  # i procesor trzeba zarejestrować jak każdą inną usługę — API Platform
-  # sięga po nie po nazwie klasy (ten sam wzorzec co w quince_withdrawal
-  # i quince_cmp).
+  # i procesor trzeba zarejestrować jak każdą inną usługę: API Platform
+  # sięga po nie po nazwie klasy.
   Quince\Api\ApiPlatform\Provider\OrderReturnProvider:
     class: Quince\Api\ApiPlatform\Provider\OrderReturnProvider
     arguments:

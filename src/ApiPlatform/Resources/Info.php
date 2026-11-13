@@ -16,7 +16,7 @@ use ApiPlatform\Metadata\Get;
 use Quince\Api\ApiPlatform\Provider\InfoProvider;
 
 /**
- * Co ten moduł oddaje — wersja i lista zasobów ze scope'ami.
+ * Co ten moduł oddaje: wersja i lista zasobów ze scope'ami.
  *
  * Instalacje sklepu mogą mieć różne wersje tego modułu (albo nie mieć go
  * wcale), więc system zewnętrzny pyta tutaj, zanim założy, że dany zasób

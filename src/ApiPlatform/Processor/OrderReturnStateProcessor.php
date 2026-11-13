@@ -22,18 +22,18 @@ use Quince\Api\Repository;
 use Symfony\Component\HttpFoundation\RequestStack;
 
 /**
- * Zmiana statusu zwrotu — wyłącznie przez `UpdateOrderReturnStateCommand`
+ * Zmiana statusu zwrotu wyłącznie przez `UpdateOrderReturnStateCommand`
  * rdzenia, ten sam kod co przycisk w natywnym panelu „Merchandise Returns".
  *
  * Nigdy bezpośredni zapis do tabeli: komenda woła `ObjectModel::update()`,
  * które odpala haki `actionObjectOrderReturnUpdateBefore/After`, i wysyła
- * mail do klienta o zmianie statusu — TYLKO gdy status faktycznie się
+ * mail do klienta o zmianie statusu, TYLKO gdy status faktycznie się
  * zmienia (powtórzenie tego samego statusu jest no-opem po stronie rdzenia,
  * bez drugiego maila).
  *
  * **Zapisywalne jest wyłącznie `stateId`.** Zasób nie ma grup serializacji,
  * więc ciało żądania mogłoby teoretycznie nieść też `id`/`shopId` i nadpisać
- * nimi odczytany wcześniej zasób — stąd `id` bierzemy wyłącznie z adresu,
+ * nimi odczytany wcześniej zasób. Dlatego `id` bierzemy wyłącznie z adresu,
  * a `shopId` wyłącznie z zapytania, tak jak w każdym innym endpoincie tego
  * modułu. Cokolwiek przyjdzie w ciele poza `stateId` jest ignorowane.
  *
