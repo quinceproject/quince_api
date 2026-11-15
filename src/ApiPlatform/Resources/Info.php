@@ -11,6 +11,10 @@ declare(strict_types=1);
 
 namespace Quince\Api\ApiPlatform\Resources;
 
+if (!defined('_PS_VERSION_')) {
+    exit;
+}
+
 use ApiPlatform\Metadata\ApiResource;
 use ApiPlatform\Metadata\Get;
 use Quince\Api\ApiPlatform\Provider\InfoProvider;

@@ -11,6 +11,10 @@ declare(strict_types=1);
 
 namespace Quince\Api\ApiPlatform;
 
+if (!defined('_PS_VERSION_')) {
+    exit;
+}
+
 use Configuration;
 use Quince\Api\ApiPlatform\Resources\OrderReturn;
 use Quince\Api\Repository;

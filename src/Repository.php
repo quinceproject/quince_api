@@ -11,6 +11,10 @@ declare(strict_types=1);
 
 namespace Quince\Api;
 
+if (!defined('_PS_VERSION_')) {
+    exit;
+}
+
 use Db;
 use OrderReturnState;
 
